@@ -1,0 +1,77 @@
+Testing your ability on json library
+
+1. Read the Json file and print value for key = crew
+ANS:
+Ship_name = "Titanic"
+Cruise_line = "White Star Line"
+Age = 3
+Tonnage = 46328
+passengers = 2435
+length = 882.5
+cabins = 840
+passenger_density = 39.02
+crew = 885.0
+
+print (crew)
+
+2. Read this json file, loop over it and print values for the key = firstName
+ANS:
+data1 = {"firstName": "John1","lastName": "Smith1","age": 25,"address": {"streetAddress": "21 2nd Street","city": "New York","state": "NY","postalCode": 10021},"phoneNumbers": {"type": "home","number": "212 555-1234"}}
+
+print(data1['firstName'])
+
+data2 = {"firstName": "John2","lastName": "Smith2","age": 25,"address": {"streetAddress": "21 2nd Street","city": "New York","state": "NY","postalCode": 10021},"phoneNumbers": {"type": "home","number": "212 555-1234"}}
+
+print(data2['firstName'])
+
+Python Collections
+list_a = [0,1,2,3,4,5,6]
+3. Print 5th element
+ANS:
+list_a = [0,2,3,4,5,6]
+list_a[4]
+
+4. Last three elements
+ANS:
+list_a[3:]
+
+5. Print Len of the list
+ANS: print(len(list_a))
+
+dict_a = {'a':1,'b':2}
+6. Print keys of the the dictionary dict_a
+ANS:
+dict_a = {'a':1,'b':2}
+print(dict_a.keys())
+
+7. Print values of the dictionary dict_a
+ANS:
+dict_a = {'a':1,'b':2}
+print(dict_a.values())
+
+8. Print value of the key = b
+ANS:
+dict_a = {'a':1,'b':2}
+print(dict_a['b'])
+
+9. Pass Python Command Line args
+
+parse_cl_args.py "Hello World !"
+
+When I run above script , it should print
+
+Hello
+World
+!
+ANS:
+import sys
+
+for word in sys.argv[1].split():
+    print(word)
+a)save the above code as parse_cl_args.py
+b)open the cmd promt and execute the statement 
+  python parse_cl_args.py "Hello World !"
+
+10. Request library for rest calls 
+ANS:
+ASK DID GET THE ANSWER
