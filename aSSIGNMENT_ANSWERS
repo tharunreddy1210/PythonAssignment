@@ -63,15 +63,32 @@ When I run above script , it should print
 Hello
 World
 !
+
 ANS:
 import sys
 
 for word in sys.argv[1].split():
     print(word)
-a)save the above code as parse_cl_args.py
-b)open the cmd promt and execute the statement 
+
+Step1:
+save the above code as parse_cl_args.py
+Step2:
+open the cmd prompt and execute the statement 
   python parse_cl_args.py "Hello World !"
 
 10. Request library for rest calls 
 ANS:
-ASK DID GET THE ANSWER
+import requests
+
+def main():
+
+    url = 'https://data.gharchive.org/2015-01-01-{0..23}.json.gz'
+
+    res = requests.get(url)
+
+    decoded_data = res.content
+
+    with open('test.json.gz', '+bw') as f:
+        f.write(decoded_data)
+
+    return 'test.json.gz'
