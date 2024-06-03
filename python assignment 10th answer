@@ -1,0 +1,28 @@
+import requests
+import os
+import gzip
+
+def main():
+    url = 'https://data.gharchive.org/2015-01-01-{0..23}.json.gz'
+    res = requests.get(url)
+    decoded_data = res.content
+    with open('test.json.gz', '+bw') as f:
+        f.write(decoded_data)
+    return 'test.json.gz'
+
+def test_main():
+    """Tests the main function."""
+    # Call the main function
+    file_path = main()
+    # Assert that the file exists and is not empty
+    assert os.path.exists(file_path)
+    assert os.path.getsize(file_path) > 0
+    # Assert that the file is a valid gzip file
+    with gzip.open(file_path, "rt") as f:
+        lines = f.readlines()
+        assert len(lines) > 0
+    # Delete the downloaded file
+    os.remove(file_path)
+
+if __name__ == "__main__":
+    test_main()
